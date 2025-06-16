@@ -2,12 +2,12 @@
 ![HeaderImage](github_images/header.jpeg) 
 
 ## Introduction
-This is a demo application built with the goal to learn about Flutter and to create a fun application.
+This is the github repo hosting source code for my own dating app. The app aims to be a clone of tinder but only aimed at 18+ year old's !
 
 Tested on Android only.
 
 ## Technologies & Architecture
-Flutter, Dart
+Flutter, Dart & loads of love!
 
 #### Firebase 
 * Authentication
