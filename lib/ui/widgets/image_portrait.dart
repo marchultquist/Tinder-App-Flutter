@@ -28,7 +28,7 @@ class ImagePortrait extends StatelessWidget {
   }
 
   Widget getImage() {
-    if (imageType == ImageType.NONE || imagePath == null) return null;
+    if (imageType == ImageType.NONE) return null;
     if (imageType == ImageType.FILE_IMAGE) {
       return Image.file(File(imagePath), fit: BoxFit.fill);
     } else if (imageType == ImageType.ASSET_IMAGE) {

@@ -25,15 +25,6 @@ class _MatchScreenState extends State<MatchScreen> {
   List<String> _ignoreSwipeIds;
 
   Future<AppUser> loadPerson(String myUserId) async {
-    if (_ignoreSwipeIds == null) {
-      _ignoreSwipeIds = List<String>();
-      var swipes = await _databaseSource.getSwipes(myUserId);
-      for (var i = 0; i < swipes.size; i++) {
-        Swipe swipe = Swipe.fromSnapshot(swipes.docs[i]);
-        _ignoreSwipeIds.add(swipe.id);
-      }
-      _ignoreSwipeIds.add(myUserId);
-    }
     var res = await _databaseSource.getPersonsToMatchWith(1, _ignoreSwipeIds);
     if (res.docs.length > 0) {
       var userToMatchWith = AppUser.fromSnapshot(res.docs.first);

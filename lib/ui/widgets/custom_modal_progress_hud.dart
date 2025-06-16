@@ -41,7 +41,6 @@ class CustomModalProgressHUD extends StatelessWidget {
     this.dismissible = false,
     @required this.child,
   })  : assert(child != null),
-        assert(inAsyncCall != null),
         super(key: key);
 
   @override
